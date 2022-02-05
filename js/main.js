@@ -147,3 +147,6 @@ function restartGame() {
 restart.addEventListener('click', restartGame);
 window.addEventListener('click', clearModal);
 main();
+
+var date = new Date().getFullYear();
+document.getElementById("copyright").innerHTML = date;

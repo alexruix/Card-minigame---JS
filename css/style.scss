@@ -18,6 +18,14 @@ body {
 h1{
   font-size: 40px;
 }
+a{
+  color: $hovercolor;
+  text-decoration: none;
+  transition: color .3s ease-in-out;
+  &:hover{
+    color: $secondary;
+  }
+}
 .container {
   width: 100%;
   padding: 0 1em;
