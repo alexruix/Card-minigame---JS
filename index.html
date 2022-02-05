@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/universal.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/responsive.min.css" media="screen and (max-width:670px)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
+  <title>Guess the card</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="title">Fire, water, nature</h1>
+  </header>
+  <section class="container">
+    <div class="wrapper flex__box-wrap flex__box-gap">
+      <div class="score">
+        <h2>Score</h2>
+        <div id="user-badge">
+          <p>You:
+            <span id="user-score">0</span>
+          </p>
+        </div>
+        <div id="cpu-badge">Computer: <span id="cpu-score">0</span></div>
+      </div>
+
+
+      <div class="flex__box cards">
+        <div class="card">
+          <img id="cardfire" src="img/cardgame.png" alt="">
+        </div>
+        <div class="card"><img id="cardwater" src="img/cardgame.png" alt=""></div>
+        <div class="card"><img id="cardnature" src="img/cardgame.png" alt=""></div>
+      </div>
+
+      <div class="score__container">
+        <button id="restart" class="button button-restart">Restart Game</button>
+        <div class="score rules">
+          <img src="img/rules.png" alt="">
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="modal__container">
+      <div class="modal">
+        <div id="result" class="modal-content">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="player">
+      <h2 class="title">Choose a card</h2>
+
+
+      <div class="card__container flex__box-gap flex__box">
+        <div class="card card__player" id="fire">
+          <img src="img/firecard.png" alt="">
+        </div>
+        <div class="card card__player" id="water"><img src="img/watercard.png" alt=""></div>
+        <div class="card card__player" id="plant"><img src="img/naturecard.png" alt=""></div>
+      </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+
+  </section>
+</body>
+
+</html>
