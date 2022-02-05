@@ -1,4 +1,4 @@
-# Minigame hecho con Javascript Nativo "Fire, water, nature"
+# Minigame made with Javascript Nativo "Fire, water, nature"
 
 # Introduction
 This is my first minigame made with Javascript. It is a simple single player game.
