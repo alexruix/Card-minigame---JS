@@ -13,7 +13,7 @@ const modal = document.querySelector(".modal");
 const fire_div = document.getElementById("fire");
 const water_div = document.getElementById("water");
 const plant_div = document.getElementById("plant");
-
+const resetimage = "img/cardgame.png"
 
 function getCpuChoice() {
   const choices = ['fire', 'water', 'nature'];
@@ -26,7 +26,8 @@ function win(userChoice, cpuChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = `<h1 class="text-win">You win!</h1> <p>Computer choose <strong class="draw">${cpuChoice}</strong></p><button class="button button-again close">Play again</button>`;
+  result.innerHTML = `<h1 class="text-win">You win!</h1> <p>Computer choose <strong class="draw">${cpuChoice}</strong></p><button class="button button-again close">Next round</button>`;
+
   modal.style.display = 'block';
 
   if (cpuChoice == "water") {
@@ -45,7 +46,7 @@ function lose(userChoice, cpuChoice) {
   cpuScore++;
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = ` <h1 class="text-lose">You lost</h1> <p>Computer choose <strong class="draw">${cpuChoice}</strong></p><button class="button button-again close">Play again</button>`;
+  result.innerHTML = ` <h1 class="text-lose">You lost</h1> <p>Computer choose <strong class="draw">${cpuChoice}</strong></p><button class="button button-again close">Next round</button>`;
   modal.style.display = 'block';
 
   if (cpuChoice == "water") {
@@ -63,7 +64,7 @@ function lose(userChoice, cpuChoice) {
 function draw(userChoice, cpuChoice) {
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = `<h1>It's a draw</h1> <p>You both choose <strong class="draw">${cpuChoice}</strong></p><button class="button button-again close">Play again</button>`;
+  result.innerHTML = `<h1>It's a draw</h1> <p>You both choose <strong class="draw">${cpuChoice}</strong></p><button class="button button-again close">Next round</button>`;
   modal.style.display = 'block'
 
   if (cpuChoice == "water") {
@@ -122,16 +123,16 @@ function clearModal(e) {
 
   if (e.target == modal) {
     modal.style.display = "none";
-    cardwater.src = "img/cardgame.png";
-    cardfire.src = "img/cardgame.png";
-    cardnature.src = "img/cardgame.png";
+    watercard.src = resetimage;
+    firecard.src = resetimage;
+    naturecard.src = resetimage;
 
   } else if (closeBtn) {
     closeBtn.addEventListener('click', function() {
       modal.style.display = "none";
-      cardwater.src = "img/cardgame.png";
-      cardfire.src = "img/cardgame.png";
-      cardnature.src = "img/cardgame.png";
+      watercard.src = resetimage;
+      firecard.src = resetimage;
+      naturecard.src = resetimage;
     });
   }
 }
@@ -147,6 +148,3 @@ function restartGame() {
 restart.addEventListener('click', restartGame);
 window.addEventListener('click', clearModal);
 main();
-
-var date = new Date().getFullYear();
-document.getElementById("copyright").innerHTML = date;
