@@ -26,7 +26,7 @@ function win(userChoice, cpuChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = `<h1 class="text-win">You win!</h1> <p>Computer choose <strong class="draw">${cpuChoice}</strong></p><button class="button button-again close">Volver a jugar</button>`;
+  result.innerHTML = `<h1 class="text-win">You win!</h1> <p>Computer choose <strong class="draw">${cpuChoice}</strong></p><button class="button button-again close">Play again</button>`;
   modal.style.display = 'block';
 
   if (cpuChoice == "water") {
@@ -45,7 +45,7 @@ function lose(userChoice, cpuChoice) {
   cpuScore++;
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = ` <h1 class="text-lose">You lost</h1> <p>Computer choose <strong class="draw">${cpuChoice}</strong></p><button class="button button-again close">Volver a jugar</button>`;
+  result.innerHTML = ` <h1 class="text-lose">You lost</h1> <p>Computer choose <strong class="draw">${cpuChoice}</strong></p><button class="button button-again close">Play again</button>`;
   modal.style.display = 'block';
 
   if (cpuChoice == "water") {
@@ -63,7 +63,7 @@ function lose(userChoice, cpuChoice) {
 function draw(userChoice, cpuChoice) {
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = `<h1>It's a draw</h1> <p>You both choose <strong class="draw">${cpuChoice}</strong></p><button class="button button-again close">Volver a jugar</button>`;
+  result.innerHTML = `<h1>It's a draw</h1> <p>You both choose <strong class="draw">${cpuChoice}</strong></p><button class="button button-again close">Play again</button>`;
   modal.style.display = 'block'
 
   if (cpuChoice == "water") {
