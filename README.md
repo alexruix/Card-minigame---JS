@@ -28,4 +28,4 @@ The tie occurs when the computer and the player choose the same card
 
 <h3>Play Game:</h3>
 You can play here: 
-https://alexruix.github.io/Minigame-con-Javascript__Fire-water-nature/
+https://cards-minigame.netlify.app/
